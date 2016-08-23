@@ -12,4 +12,4 @@ Only the rows that are visible on the screen (and few more for smoother scrollin
 
 When the user scrolls the body's `top` changes and `range` object in the scope is updated with new `from` and `to` values. `ng-repeat` then slices the original array to render only required rows.
 
-![How it works](how-it-works.svg)
+![How it works](how-it-works.png)
