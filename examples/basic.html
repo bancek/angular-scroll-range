@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div ng-app="example" ng-controller="ExampleCtrl">
+      <div scroll-range="range" scroll-range-total="entries.length" scroll-range-row-height="60" style="position: relative;">
+        <div class="entries" style="position: absolute; width: 100%;">
+          <div class="entry" ng-repeat="entry in entries.slice(range.from, range.to) track by entry.id" style="height: 60px; border-bottom: 1px solid #888">
+            {{ entry.id }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script src="http://code.angularjs.org/1.1.5/angular.min.js"></script>
+    <script src="../src/angular-scroll-range.js"></script>
+
+    <script type="text/javascript">
+      angular.module('example', ['angularScrollRange'])
+
+      .controller('ExampleCtrl', function($scope) {
+        $scope.entries = [];
+
+        for (var i = 0; i < 1000; i++) {
+          $scope.entries.push({
+            id: i
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
