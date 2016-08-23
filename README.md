@@ -4,4 +4,4 @@ Unlimited scrolling for AngularJS
 
 ## Example
 
-[Basic example](http://bancek.github.io/angular-scroll-range/examples/basic.html)
+[Basic example](https://bancek.github.io/angular-scroll-range/examples/basic.html)
